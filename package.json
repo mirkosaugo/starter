@@ -1,0 +1,45 @@
+{
+    "name": "Blendmodes_Starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "gulp",
+        "build": "gulp build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "''"
+    },
+    "author": "Blendmodes",
+    "license": "ISC",
+    "devDependencies": {
+        "ansi-colors": "^1.0.1",
+        "babel-core": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.26.0",
+        "babelify": "^8.0.0",
+        "browser-sync": "^2.23.6",
+        "browserify": "^16.1.0",
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-htmlmin": "^4.0.0",
+        "gulp-sass": "^3.1.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-twig": "^1.2.0",
+        "gulp-uglify": "^3.0.0",
+        "gulp-uglifycss": "^1.0.9",
+        "vinyl-buffer": "^1.0.1",
+        "vinyl-source-stream": "^2.0.0",
+        "watchify": "^3.10.0"
+    },
+    "dependencies": {
+        "barba.js": "^1.0.0",
+        "gsap": "^1.20.4",
+        "in-view": "^0.6.1",
+        "scrollmagic": "^2.0.5",
+        "underscore": "^1.8.3"
+    }
+}

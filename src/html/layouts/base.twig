@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html lang="it">
+
+    {% include 'partials/head.twig' %}
+
+    <body class="no-touch">
+
+        {% include 'partials/header.twig' %}
+
+        <div class="m-site" id="barba-wrapper">
+            {% block content %}{% endblock %}
+        </div>
+
+        <script src="/assets/js/script.js"></script>
+
+    </body>
+
+</html>
