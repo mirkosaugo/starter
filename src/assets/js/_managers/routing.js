@@ -1,6 +1,8 @@
 import Barba     from 'barba.js'
 import TweenLite from 'gsap'
 
+
+
 const RoutingManager = (() => {
 
     Barba.Pjax.getTransition = () => {
@@ -50,9 +52,10 @@ const RoutingManager = (() => {
         onLeave: () => {
         },
         onEnter: () => {
+            console.log('onEnter HomePage')
         },
         onEnterCompleted: () => {
-            console.log('enter completed HomePage')
+            console.log('onEnterCompleted HomePage')
         }
     })
 
@@ -61,13 +64,12 @@ const RoutingManager = (() => {
         onLeave: () => {
         },
         onEnter: () => {
+            console.log('onEnter AboutPage')
         },
         onEnterCompleted: () => {
-            console.log('enter completed AboutPage')
+            console.log('onEnterCompleted AboutPage')
         }
     })
-
-
 
     const _init = () => {
         console.log('Start RoutingManager')
@@ -75,7 +77,6 @@ const RoutingManager = (() => {
         AboutPage.init()
         Barba.Pjax.start()
     }
-
 
     return {
         init: _init
