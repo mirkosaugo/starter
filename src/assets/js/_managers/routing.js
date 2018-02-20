@@ -1,4 +1,5 @@
-import Barba from 'barba.js'
+import Barba     from 'barba.js'
+import TweenLite from 'gsap'
 
 const RoutingManager = (() => {
 
@@ -15,18 +16,12 @@ const RoutingManager = (() => {
         showPreloader: function() {
 
             return new Promise((resolve,reject) => {
-                setTimeout(() => {
-                    console.log(3)
-                }, 0)
-                setTimeout(() => {
-                    console.log(2)
-                }, 1000)
-                setTimeout(() => {
-                    console.log(1)
-                }, 2000)
-                setTimeout(() => {
-                    resolve()
-                }, 3000)
+                TweenLite.to('.m-preloader', .5, {
+                    y: 0,
+                    onComplete: () => {
+                        resolve()
+                    }
+                })
             })
 
         },
@@ -39,7 +34,13 @@ const RoutingManager = (() => {
             _old.style.display    = 'none'
             _new.style.visibility = "visible"
 
-            _this.done()
+            TweenLite.to('.m-preloader', .5, {
+                y: "-100%",
+                clearProps: "all",
+                onComplete: () => {
+                    _this.done()
+                }
+            })
 
         }
     })
